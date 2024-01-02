@@ -1,16 +1,17 @@
 import React from 'react'
 import bulbasur from './../../assets/bulbasur.png'
-function Pokemon() {
+import PokemonList from '../PokemonList/PokemonList'
+
+
+function Pokemon({name, image} ) {
 
   return (
-    <div className="flex flex-wrap gap-12 items-center mx-10">
-
-      <div className="w-56 ">
-       <p className='text-center tracking-[.4em] font-bold'>bulbasur</p>
-       <img src={bulbasur} alt="" />
+    <div className="flex flex-col w-48 ">  
+      
+       <div className='text-center tracking-[.4em] font-bold'>{name}</div>
+      <div> <img src={image} alt="" /></div>
       </div>
-     
-    </div>
+      
 
   )
 }
