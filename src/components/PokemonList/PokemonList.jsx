@@ -46,7 +46,7 @@ const [nextUrl, setNextUrl]=useState('')
     },[pokedexUrl])
     return (
       <div>
-          <div className="grid  grid-cols-5  ml-24  gap-10 min-h-full">
+          <div className="grid  grid-cols-5  ml-24  gap-10 ">
               {(isLoading)?  <Loading/>: 
               pokemonList.map((el)=><Pokemon name={el.name} image={el.image} id={el.id}  key={el.id}    />)
               }
@@ -58,9 +58,7 @@ const [nextUrl, setNextUrl]=useState('')
             <button disabled={nextUrl==null}  onClick={()=>setPokedexUrl(nextUrl)} className="border rounded border-red-600 bg-red-600 cursor-pointer text-white px-4 py-1 mb-10 mt-8">Next</button>
         
           </div>
-          <div className='test'>
-            Vishal
-          </div>
+         
       </div>
     )
  
