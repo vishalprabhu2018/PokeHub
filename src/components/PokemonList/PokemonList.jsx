@@ -2,6 +2,7 @@ import React from 'react'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 import Pokemon from '../Pokemon/Pokemon';
+import Loading from '../Loading/Loading';
 
 function PokemonList() {
 const [isLoading,setIsLoading]=useState(true)
@@ -44,9 +45,10 @@ const pokedexUrl='https://pokeapi.co/api/v2/pokemon/';
     return (
       <div>
           <div className="grid  grid-cols-5  ml-24  gap-10">
-              {(isLoading)? '...Loading': 
+              {(isLoading)?  <Loading/>: 
               pokemonList.map((el)=><Pokemon name={el.name} image={el.image} id={el.id}  key={el.id}    />)
               }
+
           </div>
       </div>
     )
