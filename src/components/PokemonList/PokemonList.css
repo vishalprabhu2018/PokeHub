@@ -1,0 +1,4 @@
+button[disabled]{
+    color:grey;
+    background-color: rgb(98, 1, 1);
+}
