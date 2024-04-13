@@ -11,7 +11,7 @@ const [pokemon,setPokemon]=useState({});
 console.log(id);
 
 async function downloadPokemon(){
-  const response=await axios.get(`http://pokeapi.co/api/v2/pokemon/${id}`)
+  const response=await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
   console.log(response.data);
   setPokemon(
     {
