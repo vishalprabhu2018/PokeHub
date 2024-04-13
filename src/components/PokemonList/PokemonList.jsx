@@ -13,6 +13,7 @@ const [nextUrl, setNextUrl]=useState('')
 
    async function downloadPokemon(){
     setIsLoading(true)
+    
         const response=await axios.get(pokedexUrl);
         const results=response.data.results;
         setNextUrl(response.data.next);
@@ -35,7 +36,6 @@ const [nextUrl, setNextUrl]=useState('')
         })
         setPokemonList(pokemonListResult)
         setIsLoading(false)
-
 
        }
 
